@@ -13,4 +13,20 @@ test('verify created issue',async function({request}){
     expect(response.status()).toEqual(201)
 
     expect(jsonResponse.key).toContain('RP')
+
+    const key = jsonResponse.key
+
+    const id = jsonResponse.id
+
+    const getIssueResponse = await issueApi.getIssue(key)
+
+    const getIssueJsonResponse = await getIssueResponse.json()
+
+    expect(key).toEqual(getIssueJsonResponse.key)
+
+    expect(id).toEqual(getIssueJsonResponse.id)
+
+    expect('To Do').toEqual(getIssueJsonResponse.fields.status.name)
+
+    expect('Button is not clickable').toEqual(getIssueJsonResponse.fields.summary)
 })
