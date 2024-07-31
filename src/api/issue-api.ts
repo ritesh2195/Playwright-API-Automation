@@ -1,4 +1,4 @@
-import {APIRequestContext} from '@playwright/test'
+import {APIRequestContext, APIResponse} from '@playwright/test'
 import { AuthHelper } from '../helpers/auth-helper'
 
 const config = require('../../config/config.json')
@@ -10,7 +10,7 @@ export class IssueApi{
         this.url = config.url
     }
 
-    async getIssue(issueId:string){
+    async getIssue(issueId:string):Promise<APIResponse>{
 
         return await this.request.get(`${this.url}/${issueId}`,{
             headers:{
@@ -19,7 +19,7 @@ export class IssueApi{
         })
     }
 
-    async createIssue(payload:any){
+    async createIssue(payload:any):Promise<APIResponse>{
         return await this.request.post(this.url,{
             data:payload,
             headers:{
@@ -31,7 +31,7 @@ export class IssueApi{
         })
     }
 
-    async deleteIssue(id:string){
+    async deleteIssue(id:string):Promise<APIResponse>{
         return await this.request.delete(`${this.url}/${id}`,{
             headers:{
                 "Authorization":`Basic ${AuthHelper.getAuthToken()}`

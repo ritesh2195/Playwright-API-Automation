@@ -29,4 +29,22 @@ export class CreateIssuePayload{
             }
         }
     }
+
+    static createSubTaskPayload(key:string,subTaskId:string){
+        return {
+            fields: {
+              project: {
+                key: "RP"
+              },
+              parent: {
+                key: key
+              },
+              summary: "New Defect",
+              description: "Defect description",
+              issuetype: {
+                id:subTaskId
+              }
+            }
+          }
+    }
 }
