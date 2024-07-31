@@ -14,4 +14,19 @@ export class CreateIssuePayload{
             }
         }
     }
+
+    static createStoryPayload(){
+        return {
+            fields:{
+                project:{
+                    key:'RP'
+                },
+                summary:'Login page functionality',
+                description:'Implement login page functionality',
+                issuetype:{
+                    name:'Story'
+                }
+            }
+        }
+    }
 }

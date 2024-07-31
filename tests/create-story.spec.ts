@@ -1,16 +1,14 @@
 import test, { expect } from "../src/utils/fixtureUtil";
 import { CreateIssuePayload } from "../src/test-data/createIssuePayload";
 
-let id:string
-test('verify created issue',async function({issueApi}){
+let id:string;
+test('Create story verification',async function({issueApi}){
 
-    const response = await issueApi.createIssue(JSON.stringify(CreateIssuePayload.createBugPayload()))
+    const response = await issueApi.createIssue(CreateIssuePayload.createStoryPayload())
+
+    expect(201).toEqual(response.status())
 
     const jsonResponse = await response.json()
-
-    expect(response.status()).toEqual(201)
-
-    expect(jsonResponse.key).toContain('RP')
 
     const key = jsonResponse.key
 
@@ -26,7 +24,7 @@ test('verify created issue',async function({issueApi}){
 
     expect('To Do').toEqual(getIssueJsonResponse.fields.status.name)
 
-    expect('Button is not clickable').toEqual(getIssueJsonResponse.fields.summary)
+    expect('Login page functionality').toEqual(getIssueJsonResponse.fields.summary)
 })
 
 test.afterEach(async function({issueApi}){

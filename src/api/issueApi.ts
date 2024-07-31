@@ -30,4 +30,12 @@ export class IssueApi{
             }
         })
     }
+
+    async deleteIssue(id:string){
+        return await this.request.delete(`${this.url}/${id}`,{
+            headers:{
+                "Authorization":`Basic ${AuthHelper.getAuthToken()}`
+            }
+        })
+    }
 }
