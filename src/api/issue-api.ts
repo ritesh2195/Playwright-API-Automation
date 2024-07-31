@@ -1,5 +1,5 @@
 import {APIRequestContext} from '@playwright/test'
-import { AuthHelper } from '../helpers/authHelper'
+import { AuthHelper } from '../helpers/auth-helper'
 
 const config = require('../../config/config.json')
 export class IssueApi{

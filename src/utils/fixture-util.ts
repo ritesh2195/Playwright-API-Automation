@@ -1,5 +1,5 @@
 import { test as baseTest } from "@playwright/test";
-import { IssueApi } from "../api/issueApi";
+import {IssueApi} from '../api/issue-api'
 
 const test = baseTest.extend<{
     issueApi:IssueApi

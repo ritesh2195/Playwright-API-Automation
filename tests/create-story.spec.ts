@@ -1,5 +1,5 @@
-import test, { expect } from "../src/utils/fixtureUtil";
-import { CreateIssuePayload } from "../src/test-data/createIssuePayload";
+import test,{expect} from "../src/utils/fixture-util"
+import {CreateIssuePayload} from '../src/test-data/create-issue-payload'
 
 let id:string;
 test('Create story verification',async function({issueApi}){
