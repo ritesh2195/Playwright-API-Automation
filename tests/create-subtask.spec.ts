@@ -12,7 +12,7 @@ test.beforeEach(async function({issueApi}){
     storyId = jsonResponse.key
 })
 
-test('Create story verification',async function({issueApi}){
+test('Create subtask verification',async function({issueApi}){
 
     const response = await issueApi.createIssue(CreateIssuePayload.createSubTaskPayload(storyId,'10016'))
 

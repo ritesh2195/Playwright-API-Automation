@@ -1,6 +1,6 @@
 export class CreateIssuePayload{
 
-    static createBugPayload(){
+    static createBugPayload():Object{
         return {
             fields:{
                 project:{
@@ -15,7 +15,7 @@ export class CreateIssuePayload{
         }
     }
 
-    static createStoryPayload(){
+    static createStoryPayload():Object{
         return {
             fields:{
                 project:{
@@ -30,7 +30,7 @@ export class CreateIssuePayload{
         }
     }
 
-    static createSubTaskPayload(key:string,subTaskId:string){
+    static createSubTaskPayload(key:string,subTaskId:string):Object{
         return {
             fields: {
               project: {
