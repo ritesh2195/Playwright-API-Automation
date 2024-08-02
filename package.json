@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"npx playwright test --project chromium"
+    "test":"npx playwright test --project chromium",
+    "generate-report":"npx allure generate ./allure-results --clean",
+    "open-report":"npx allure open ./allure-report"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,8 @@
   "devDependencies": {
     "@playwright/test": "^1.42.1",
     "@types/node": "^22.0.0",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "allure-commandline": "^2.24.1",
+    "allure-playwright": "2.9.2"
   }
 }
