@@ -1,5 +1,6 @@
 import {APIRequestContext, APIResponse} from '@playwright/test'
 import { AuthHelper } from '../helpers/auth-helper'
+import { JiraApiEndpoint } from '../enums/jira-endpoints'
 
 const config = require('../../config/config.json')
 export class IssueApi{
@@ -12,7 +13,7 @@ export class IssueApi{
 
     async getIssue(issueId:string):Promise<APIResponse>{
 
-        return await this.request.get(`${this.url}/${issueId}`,{
+        return await this.request.get(`${this.url+JiraApiEndpoint.ISSUE}/${issueId}`,{
             headers:{
                 "Authorization":`Basic ${AuthHelper.getAuthToken()}`
             }
@@ -20,7 +21,7 @@ export class IssueApi{
     }
 
     async createIssue(payload:any):Promise<APIResponse>{
-        return await this.request.post(this.url,{
+        return await this.request.post(this.url+JiraApiEndpoint.ISSUE,{
             data:payload,
             headers:{
                 "Authorization":`Basic ${AuthHelper.getAuthToken()}`,
@@ -32,7 +33,7 @@ export class IssueApi{
     }
 
     async deleteIssue(id:string):Promise<APIResponse>{
-        return await this.request.delete(`${this.url}/${id}`,{
+        return await this.request.delete(`${this.url+JiraApiEndpoint.ISSUE}/${id}`,{
             headers:{
                 "Authorization":`Basic ${AuthHelper.getAuthToken()}`
             }
