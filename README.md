@@ -30,7 +30,7 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
 
    ```bash
    npm install
-3. **Configuration:**
+ ## Configuration
 
     Create a config.json file in the config directory and add your Jira API URL and credentials:
   ```json
