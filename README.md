@@ -20,3 +20,7 @@ This project automates interactions with the Jira API, including operations on i
    ```bash
    git clone https://github.com/your-username/jira-api-automation.git
    cd jira-api-automation
+2. **Install dependencies:**
+
+   ```bash
+   npm install
