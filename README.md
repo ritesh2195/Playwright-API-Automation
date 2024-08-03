@@ -18,7 +18,7 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
 
 - **Issue Management**: Autonate Create, fetch, and delete Jira issues.
 - **User Management**: Automate user-related operations.
-- **Comment Management**: Auromate comments on Jira issues.
+- **Comment Management**: Automate add and fetch comments on Jira issues.
 
 ## Installation
 
