@@ -39,5 +39,3 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
   "username": "your-username",
   "apiToken": "your-api-token"
 }
-
-4. **Usage:**
