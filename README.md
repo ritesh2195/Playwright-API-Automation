@@ -11,7 +11,7 @@ This project automates interactions with the Jira API, including operations on i
   - [Issue API](#issue-api)
   - [User API](#user-api)
   - [Comment API](#comment-api)
-  - 
+- [Test Reporting](#test-reporting)
 ## Project Overview
 
 Jira API Automation provides a streamlined and efficient way to interact with Jira's REST API. The main features include:
@@ -39,3 +39,13 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
   "username": "your-username",
   "apiToken": "your-api-token"
 }
+
+4. **Test Reporting:**
+  This project uses Allure Report to generate detailed test reports. Follow these steps to generate and view reports:
+    **To generate allure report:**
+   ```bash
+   npx allure generate ./allure-results --clean
+
+  **To open allure report:**
+  ```bash
+   npx allure open ./allure-report
