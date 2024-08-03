@@ -31,8 +31,7 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
    ```bash
    npm install
  ## Configuration
-
-    Create a config.json file in the config directory and add your Jira API URL and credentials:
+  Create a config.json file in the config directory and add your Jira API URL and credentials:
   ```json
 {
   "url": "https://your-jira-instance.atlassian.net",
