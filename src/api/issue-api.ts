@@ -1,5 +1,4 @@
 import {APIRequestContext, APIResponse} from '@playwright/test'
-import { AuthHelper } from '../helpers/auth-helper'
 import { JiraApiEndpoint } from '../enums/jira-endpoints'
 import { HeaderHelper } from '../helpers/header-helper'
 

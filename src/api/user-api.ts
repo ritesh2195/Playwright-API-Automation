@@ -1,6 +1,5 @@
 import { APIRequestContext, APIResponse } from "@playwright/test";
 import { JiraApiEndpoint } from "../enums/jira-endpoints";
-import { AuthHelper } from "../helpers/auth-helper";
 import { HeaderHelper } from "../helpers/header-helper";
 
 const config = require('../../config/config.json')
