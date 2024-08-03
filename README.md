@@ -10,8 +10,6 @@ This project automates interactions with the Jira API, including operations on i
   - [Issue API](#issue-api)
   - [User API](#user-api)
   - [Comment API](#comment-api)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
