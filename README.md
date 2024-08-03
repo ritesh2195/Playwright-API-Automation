@@ -26,8 +26,8 @@ This project automates interactions with the Jira API, including operations on i
    npm install
 3. **Install dependencies:**
   Create a config.json file in the config directory and add your Jira API URL and credentials:
-   ```bash
-   {
+  ```json
+{
   "url": "https://your-jira-instance.atlassian.net",
   "username": "your-username",
   "apiToken": "your-api-token"
