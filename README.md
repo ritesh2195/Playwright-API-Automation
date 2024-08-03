@@ -26,14 +26,13 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
 
    ```bash
    https://github.com/ritesh2195/Jira-API-Playwright-Automation.git
-   cd jira-api-automation
 2. **Install dependencies:**
 
    ```bash
    npm install
 3. **Configuration:**
 
-  Create a config.json file in the config directory and add your Jira API URL and credentials:
+    Create a config.json file in the config directory and add your Jira API URL and credentials:
   ```json
 {
   "url": "https://your-jira-instance.atlassian.net",
