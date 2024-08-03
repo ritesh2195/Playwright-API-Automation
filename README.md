@@ -39,13 +39,3 @@ Jira API Automation provides a streamlined and efficient way to interact with Ji
   "username": "your-username",
   "apiToken": "your-api-token"
 }
-
-4. **Test Reporting:**
-  This project uses Allure Report to generate detailed test reports. Follow these steps to generate and view reports:
-    **To generate allure report:**
-   ```bash
-   npx allure generate ./allure-results --clean
-
-  **To open allure report:**
-  ```bash
-   npx allure open ./allure-report
