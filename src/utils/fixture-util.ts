@@ -1,4 +1,4 @@
-import { test as baseTest, request } from "@playwright/test";
+import { test as baseTest } from "@playwright/test";
 import {IssueApi} from '../api/issue-api'
 import { CommentApi } from "../api/comment-api";
 import { UserApi } from "../api/user-api";

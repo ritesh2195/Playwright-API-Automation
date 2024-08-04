@@ -16,4 +16,17 @@ export class UserApi{
             headers:HeaderHelper.issueRequestHeader()
         })
     }
+
+    async createUser(payload:any):Promise<APIResponse>{
+        return await this.request.get(`${this.url+JiraApiEndpoint.USER}`,{
+            headers:HeaderHelper.issueRequestHeader(),
+            data:payload
+        })
+    }
+
+    async deleteUser(accountId:string){
+        return await this.request.delete(`${this.url+JiraApiEndpoint.USER}?accountId=${accountId}`,{
+            headers:HeaderHelper.issueRequestHeader()
+        })
+    }
 }
