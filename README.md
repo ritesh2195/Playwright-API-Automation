@@ -149,7 +149,6 @@ test.afterEach(async function({issueApi}){
 ```
 ## Other APIs
 Other APIs, such as UserApi and CommentApi, can be used similarly to the IssueApi. Create instances of these classes and call their methods as shown in the IssueApi examples.
-
 ## Test Reporting
 This project uses Allure Report to generate detailed test reports. Follow these steps to generate and view reports:
 
