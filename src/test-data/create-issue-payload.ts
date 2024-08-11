@@ -1,7 +1,10 @@
+import { IssueModel } from "../models/issue-model"
+
+
 export class CreateIssuePayload{
 
-    static createBugPayload():Object{
-        return {
+    static createBugPayload():IssueModel{
+        const issuePayload:IssueModel = {
             fields:{
                 project:{
                     key:'RP'
@@ -13,10 +16,12 @@ export class CreateIssuePayload{
                 }
             }
         }
+
+        return issuePayload
     }
 
-    static createStoryPayload():Object{
-        return {
+    static createStoryPayload():IssueModel{
+        const storyPayload:IssueModel =  {
             fields:{
                 project:{
                     key:'RP'
@@ -28,10 +33,12 @@ export class CreateIssuePayload{
                 }
             }
         }
+
+        return storyPayload
     }
 
-    static createSubTaskPayload(key:string,subTaskId:string):Object{
-        return {
+    static createSubTaskPayload(key:string,subTaskId:string):IssueModel{
+        const subtaskPayload:IssueModel =  {
             fields: {
               project: {
                 key: "RP"
@@ -42,9 +49,11 @@ export class CreateIssuePayload{
               summary: "New Defect",
               description: "Defect description",
               issuetype: {
-                id:subTaskId
+                name:subTaskId
               }
             }
           }
+
+          return subtaskPayload
     }
 }
